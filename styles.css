@@ -1,0 +1,482 @@
+/* GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e6ecf0;
+  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  text-rendering: optimizeLegibility !important; /* Get a better definition to the font. !important = overwrite any font. */
+  -webkit-font-smoothing: antialiased !important; /* Reduce the visual defects that occur when high-resolution images are presented in a lower resolution. */
+}
+
+input,
+button {
+  outline: 0;
+}
+/* GLOBAL STYLES ENDS */
+
+/* BODY ALIGN CONTENT (MARGIN BOTH SIDES OF THE PAGE */
+.content {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+/* BODY ALIGN CONTENT ENDS */
+
+/* MAIN HEADER */
+#main-header {
+  height: 46px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+#main-header .content {
+  display: flex;
+  /* flex-direction: row by default, so 'align-items = vertical. */
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#main-header ul {
+  display: flex; /* flex-direction: row. */
+  list-style: none;
+}
+
+#main-header li {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #667580;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+#main-header li:first-child {
+  margin: 0;
+}
+
+.home-header-icons {
+  margin-right: 7px;
+  height: 15px;
+}
+/* MAIN HEADER ENDS */
+
+/* SEARCH HEADER */
+.search-header {
+  display: flex;
+}
+
+.search-header input {
+  width: 220px;
+  border: 1px solid #e6ecf0;
+  height: 34px;
+  padding: 0 30px 0px 12px;
+  border-radius: 16px;
+  color: #667581;
+  font-size: 12px;
+  background: #f5f8fa url('images/search.svg') no-repeat 190px center;
+  background-size: 15px;
+}
+
+.search-header img {
+  width: 34px;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+.search-header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 90px;
+  font-weight: bold;
+  font-size: 14px;
+  background: #3bb9e3;
+  color: #fff;
+  border: 0;
+  border-radius: 16px;
+}
+/* SEARCH HEADER ENDS */
+
+/* BANNER */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  height: 380px;
+  width: 100%;
+  background: #3bb9e3;
+}
+/* BANNER ENDS */
+
+/* BAR */
+.bar {
+  height: 59px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.bar .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 285px;
+  height: 100%;
+}
+
+.bar ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+}
+
+.bar li {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontal */
+  justify-content: center; /* vertical */
+  padding: 0 15px;
+  position: relative;
+}
+
+.bar span {
+  color: #667580;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.bar strong {
+  color: #667580;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.active::after {
+  content: '';
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #3bb9e3;
+}
+
+.active strong {
+  color: #3bb9e3;
+}
+
+.actions {
+  display: flex;
+}
+
+.actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 90px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #3bb9e3;
+  border: 1px solid #3bb9e3;
+  border-radius: 16px;
+  margin-right: 20px;
+}
+
+.actions img {
+  margin-top: 10px;
+}
+/* BAR ENDS */
+
+/* PROFILE */
+.wrapper-profile {
+  display: flex;
+}
+
+.profile {
+  margin-top: -130px;
+  width: 260px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -130px;
+}
+
+.wrapper-profile h1 {
+  font-size: 21px;
+  color: #1f2226;
+  margin-top: 10px;
+}
+
+.wrapper-profile span {
+  font-size: 14px;
+  color: #53626c;
+}
+
+.wrapper-profile p {
+  font-size: 14px;
+  color: #53626c;
+  margin-top: 15px;
+}
+
+.wrapper-profile ul {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.wrapper-profile li {
+  display: flex;
+  align-items: center; /* vertical */
+  font-size: 14px;
+  color: #657786;
+}
+
+.wrapper-profile img {
+  margin-right: 10px;
+}
+
+.wrapper-profile img:first-child {
+  margin-top: 0;
+}
+
+.widget {
+  margin-top: 20px;
+}
+
+.widget strong {
+  display: flex;
+  align-items: center; /* vertical */
+  font-weight: normal;
+  color: #3bb9e3;
+  font-size: 14px;
+}
+
+.widget img {
+  margin-right: 5px;
+}
+
+.followers ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.followers li {
+  /* flex: flex-grow + flex-shrink + flex-basis */
+  /* Grow = to extends the icons if necessary, to get full width of the container */
+  /* Shrink = Not get the other container, it squeeze everything in one container */
+  /* Basis = To get the right configuration */
+  flex: 1 0 auto;
+  width: 45px;
+  height: 45px;
+  background: #d0d5d9;
+  border-radius: 50%;
+  margin: 0 5px 10px 0;
+}
+
+.images ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.images li {
+  flex: 1 0 auto;
+  width: 80px;
+  height: 80px;
+  background: #d0d5d9;
+  border-radius: 8%;
+  margin: 0 5px 5px 0;
+}
+/* PROFILE ENDS */
+
+/* TIMELINE */
+.timeline {
+  /* flex: 1 = To occupy all the size of the container. */
+  /*Container with 1170px - profile = 260 and widget = 267 so, timeline = 582. */
+  flex: 1; /* first element = flex-grow */
+  background: #fff;
+  margin: 10px 20px 5px 20px;
+}
+
+.timeline nav {
+  border-bottom: 1px solid #e6ecf0;
+  padding: 10px 15px;
+}
+
+.timeline a {
+  text-decoration: none;
+  color: #3bb9e3;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.timeline a:first-child {
+  margin-left: 0;
+}
+
+.timeline a.active2 {
+  color: #1f2226;
+}
+
+.timeline ul.tweets {
+  list-style: none;
+}
+
+.timeline ul.tweets li {
+  border-bottom: 1px solid #e6ecf0;
+  padding: 10px 15px;
+}
+
+.timeline ul.tweets li > img {
+  height: 48px;
+  border-radius: 50%;
+}
+
+.timeline ul.tweets li .info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-icons,
+.timeline ul li a {
+  margin-right: 7px;
+  height: 12px;
+}
+
+.timeline ul.tweets li .info p {
+  font-size: 14px;
+  color: #1f2326;
+}
+
+.timeline ul.tweets li .info .actions a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #667580;
+  margin-top: 20px;
+}
+
+/* TIMELINW ENDS */
+
+/* WIDGET-RIGHT */
+.aside {
+  width: 290px;
+  margin-top: 10px;
+}
+
+.aside .who-to-follow {
+  background: #fff;
+  padding: 15px 15px 2px 15px;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+}
+
+.title strong {
+  font-size: 18px;
+  color: #1f2226;
+}
+
+.title a {
+  color: #3bb9e3;
+  font-size: 12px;
+  text-decoration: none;
+  position: relative;
+  padding-left: 10px;
+}
+
+.title a::before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #222;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.who-to-follow ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.who-to-follow li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccd6dd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-who-to-follow {
+  display: flex;
+  align-items: center;
+}
+
+.profile-who-to-follow img {
+  width: 48px;
+  border-radius: 50%;
+}
+
+.info {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info strong {
+  font-size: 14px;
+  color: #1f2326;
+}
+
+.info span {
+  font-weight: normal;
+  color: #9a9a9a;
+}
+
+.info button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 27px;
+  width: 90px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #3bb9e3;
+  border: 1px solid #3bb9e3;
+  border-radius: 16px;
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+.li-who-to-follow > a {
+  color: #ccd6dd;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* WIDGET-RIGHT ENDS */
